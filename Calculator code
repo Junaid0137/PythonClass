@@ -1,0 +1,310 @@
+package P1;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
+
+public class Example3 {
+	int a,b;
+	int c;
+	String op;
+	JFrame frame;
+	private JTextField textField;
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Example3 window = new Example3();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public Example3() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setResizable(false);
+		frame.getContentPane().setFont(new Font("Dialog", Font.BOLD, 15));
+		frame.getContentPane().setBackground(new Color(255, 250, 250));
+		frame.getContentPane().setLayout(null);
+		
+		
+		ImageIcon image=new ImageIcon("D:\\Anime\\calc.png");
+		frame.setIconImage(image.getImage());
+
+		JButton btnNewButton = new JButton("7");
+		btnNewButton.setBackground(new Color(245, 255, 250));
+		btnNewButton.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(7)));
+				}
+			}
+		});
+		btnNewButton.setBounds(20, 112, 60, 60);
+		frame.getContentPane().add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("8");
+		btnNewButton_1.setBackground(new Color(245, 255, 250));
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_1)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(8)));
+				}
+			}
+		});
+		btnNewButton_1.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_1.setBounds(90, 112, 60, 60);
+		frame.getContentPane().add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("9");
+		btnNewButton_2.setBackground(new Color(245, 255, 250));
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_2)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(9)));
+				}
+			}
+		});
+		btnNewButton_2.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_2.setBounds(160, 112, 60, 60);
+		frame.getContentPane().add(btnNewButton_2);
+		
+		JButton btnNewButton_3 = new JButton("4");
+		btnNewButton_3.setBackground(new Color(245, 255, 250));
+		btnNewButton_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_3)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(4)));
+				}
+			}
+		});
+		btnNewButton_3.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_3.setBounds(20, 183, 60, 60);
+		frame.getContentPane().add(btnNewButton_3);
+		
+		JButton btnNewButton_4 = new JButton("5");
+		btnNewButton_4.setBackground(new Color(245, 255, 250));
+		btnNewButton_4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_4)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(5)));
+				}
+			}
+		});
+		btnNewButton_4.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_4.setBounds(90, 183, 60, 60);
+		frame.getContentPane().add(btnNewButton_4);
+		
+		JButton btnNewButton_5 = new JButton("6");
+		btnNewButton_5.setBackground(new Color(245, 255, 250));
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_5)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(6)));
+				}
+			}
+		});
+		btnNewButton_5.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_5.setBounds(160, 183, 60, 60);
+		frame.getContentPane().add(btnNewButton_5);
+		
+		JButton btnNewButton_6 = new JButton("1");
+		btnNewButton_6.setBackground(new Color(245, 255, 250));
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_6)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(1)));
+				}
+			}
+		});
+		btnNewButton_6.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_6.setBounds(20, 254, 60, 60);
+		frame.getContentPane().add(btnNewButton_6);
+		
+		JButton btnNewButton_7 = new JButton("2");
+		btnNewButton_7.setBackground(new Color(245, 255, 250));
+		btnNewButton_7.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_7)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(2)));
+				}
+			}
+		});
+		btnNewButton_7.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_7.setBounds(90, 254, 60, 60);
+		frame.getContentPane().add(btnNewButton_7);
+		
+		JButton btnNewButton_8 = new JButton("3");
+		btnNewButton_8.setBackground(new Color(245, 255, 250));
+		btnNewButton_8.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_8)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(3)));
+				}
+			}
+		});
+		btnNewButton_8.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_8.setBounds(160, 254, 60, 60);
+		frame.getContentPane().add(btnNewButton_8);
+		
+		JButton btnNewButton_9 = new JButton("+");
+		btnNewButton_9.setBackground(new Color(255, 240, 245));
+		btnNewButton_9.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				a=Integer.parseInt(textField.getText());
+				op="+";
+				textField.setText("");
+			}
+		});
+		btnNewButton_9.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_9.setBounds(230, 112, 60, 60);
+		frame.getContentPane().add(btnNewButton_9);
+		
+		JButton btnNewButton_10 = new JButton("-");
+		btnNewButton_10.setBackground(new Color(255, 240, 245));
+		btnNewButton_10.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				a=Integer.parseInt(textField.getText());
+				op="-";
+				textField.setText("");
+			}
+		});
+		btnNewButton_10.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_10.setBounds(230, 183, 60, 58);
+		frame.getContentPane().add(btnNewButton_10);
+		
+		JButton btnNewButton_11 = new JButton("*");
+		btnNewButton_11.setBackground(new Color(255, 240, 245));
+		btnNewButton_11.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				a=Integer.parseInt(textField.getText());
+				op="*";
+				textField.setText("");
+			}
+		});
+		btnNewButton_11.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_11.setBounds(230, 254, 60, 60);
+		frame.getContentPane().add(btnNewButton_11);
+		
+		JButton btnNewButton_12 = new JButton("=");
+		btnNewButton_12.setBackground(new Color(255, 240, 245));
+		btnNewButton_12.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				b=Integer.parseInt(textField.getText());
+				if(op=="+")
+					c=a+b;
+				else if(op=="-")
+					c=a-b;
+				else if(op=="*")
+					c=a*b;
+				else if(op=="/")
+				{
+					c=a/b;
+				}
+				else if(op=="%")
+					c=a%b;
+				textField.setText(Integer.toString(c));
+			}
+		});
+		btnNewButton_12.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_12.setBounds(230, 325, 60, 60);
+		frame.getContentPane().add(btnNewButton_12);
+		
+		JButton btnNewButton_13 = new JButton("0");
+		btnNewButton_13.setBackground(new Color(245, 255, 250));
+		btnNewButton_13.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource()==btnNewButton_13)
+				{
+					textField.setText(textField.getText().concat(String.valueOf(0)));
+				}
+			}
+		});
+		btnNewButton_13.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_13.setBounds(20, 325, 60, 60);
+		frame.getContentPane().add(btnNewButton_13);
+		
+		JButton btnNewButton_14 = new JButton("/");
+		btnNewButton_14.setBackground(new Color(255, 240, 245));
+		btnNewButton_14.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				a=Integer.parseInt(textField.getText());
+				op="/";
+				textField.setText("");
+			}
+		});
+		btnNewButton_14.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_14.setBounds(90, 325, 60, 60);
+		frame.getContentPane().add(btnNewButton_14);
+		
+		JButton btnNewButton_15 = new JButton("%");
+		btnNewButton_15.setBackground(new Color(255, 240, 245));
+		btnNewButton_15.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				a=Integer.parseInt(textField.getText());
+				op="%";
+				textField.setText("");
+			}
+		});
+		btnNewButton_15.setFont(new Font("Dialog", Font.BOLD, 15));
+		btnNewButton_15.setBounds(160, 325, 60, 60);
+		frame.getContentPane().add(btnNewButton_15);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 20));
+		textField.setBackground(new Color(230, 230, 250));
+		textField.setEditable(false);
+		textField.setBounds(10, 11, 366, 90);
+		frame.getContentPane().add(textField);
+		textField.setColumns(10);
+		
+		JButton btnNewButton_12_1 = new JButton("C");
+		btnNewButton_12_1.setBackground(new Color(230, 230, 250));
+		btnNewButton_12_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textField.setText(null);
+			}
+		});
+		btnNewButton_12_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		btnNewButton_12_1.setBounds(300, 112, 70, 273);
+		frame.getContentPane().add(btnNewButton_12_1);
+		frame.setBounds(100, 100, 403, 464);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
